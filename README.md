@@ -8,28 +8,32 @@
 3. maven 3.6+
 
 ## Dependency
-1. 打开guns-8.1.2-roses-kernel文件夹，执行mvn clean install命令，将核心包安装到本地仓库
-2. 打开guns-8.1.2-enterprise-plugins文件夹，执行mvn clean install命令，将企业版插件核心包安装到本地仓库
+1. 打开`guns-8.1.2-roses-kernel`文件夹，执行`mvn clean install`命令，将核心包安装到本地仓库
+2. 打开`guns-8.1.2-enterprise-plugins`文件夹，执行`mvn clean install`命令，将企业版插件核心包安装到本地仓库
 
 ## 启动后端
-需要更改的settings:
+
+需要更改的`settings`:
 1. guns version 1.8
 ![alt text](fig/image.png)
 2. 修改 maven 配置
 ![alt text](fig/image-1.png)
 3. 设置 `model-platform-yx/guns-8.1.2-backend/src/main/java` 为 Source root, (右键 -> Mark Directory as -> Sources Root)
-4. 设置 `model-platform-yx/guns-8.1.2-backend/src/main/resources` 为 Test Resource root, (右键 -> Mark Directory as -> Test Resource Root)
+4. 设置 `model-platform-yx/guns-8.1.2-backend/src/main/resources` 为 Resource root, (右键 -> Mark Directory as -> Resource Root)
 5. 打开guns-8.1.2-backend启动后端即可
 
 ## 启动前端
-打开`model-platform-yx/guns-8.1.2-front`,执行npm run dev命令，即可启动项目
+
+打开`model-platform-yx/guns-8.1.2-front`
+
+执行`npm run dev`命令，即可启动项目
 
 # 如何建表
 
 - 这一部分可以同时参考PDF 《代码生成及菜单配置》
 https://gunsdevops.com/login 注册并登陆
 
-## 生成表
+## 在GUNS生成表
 
 0 [Button] `开始使用` -> 1 [左侧边栏] `应用设计`
 
@@ -41,15 +45,16 @@ https://gunsdevops.com/login 注册并登陆
 
 -> 4 粘贴自己的SQL代码
 - 把float改成decimal(x,y)
+x, y需要根据需要自己设置, x为一共有几位数，y为小数点后有几位数
 - 把boolean改成char(1)
 
 -> 5 点击`确定`
 
-不断重复3,4,5 直到这个子模块的表全部导入
+-> 不断重复3,4,5 直到这个子模块的表全部导入
 
 ## 生成后端代码
 
-1 [左侧边栏] `应用生成`
+-> 1 [左侧边栏] `应用生成`
 
 -> 2 [上面边栏] `代码生成`
 
@@ -69,7 +74,7 @@ https://gunsdevops.com/login 注册并登陆
 
 ## 生成前端代码
 
-1 [左侧边栏] `应用生成`
+-> 1 [左侧边栏] `应用生成`
 
 -> 2 [上面边栏] `代码生成`
 
@@ -110,6 +115,14 @@ https://gunsdevops.com/login 注册并登陆
 ## 前端代码部署
 
 1. 在 `guns-8.1.2-front/src/views/` 自己的模块下面 **建立 一个当前子模块的文件夹**，将下载的前端代码解压，将解压后的文件夹拷贝到这个文件夹中
+
+# 在 SQL 中生成表
+
+连接服务器上的数据库
+
+把建表语句输入`新建查询`中，点击运行
+
+![alt text](fig/image-6.png)
 
 # 建立菜单
 
