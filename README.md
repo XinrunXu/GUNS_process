@@ -28,6 +28,16 @@
 
 执行`npm run dev`命令，即可启动项目
 
+# 在 SQL 中生成表
+
+连接服务器上的数据库
+
+把建表语句输入`新建查询`中，点击运行
+
+![alt text](fig/image-6.png)
+
+推荐现在SQL中生成表，可以找到一些报错
+
 # 如何建表
 
 - 这一部分可以同时参考PDF 《代码生成及菜单配置》
@@ -35,7 +45,9 @@ https://gunsdevops.com/login 注册并登陆
 
 ## 在GUNS生成表
 
-0 [Button] `开始使用` -> 1 [左侧边栏] `应用设计`
+-> 0 [Button] `开始使用`
+
+-> 1 [左侧边栏] `应用设计`
 
 -> 2 `数据表`
 
@@ -44,9 +56,9 @@ https://gunsdevops.com/login 注册并登陆
 -> 3 [右侧上方] `导入SQL`
 
 -> 4 粘贴自己的SQL代码
-- 把float改成decimal(x,y)
+- 把 float 改成 decimal(x,y)
 x, y需要根据需要自己设置, x为一共有几位数，y为小数点后有几位数
-- 把boolean改成char(1)
+- 把 boolean 改成 char(1)
 
 -> 5 点击`确定`
 
@@ -100,12 +112,23 @@ x, y需要根据需要自己设置, x为一共有几位数，y为小数点后有
    ![alt text](fig/image-7.png)
     a. 删除红色的行
     b. 在 @Resource 上 按快捷键 `Alt + Enter` （mac 上是 `Option + Enter`） 选择 `Add module dependency`，选择当前模块
+
+    ```java
+    import javax.annotation.Resource;
+    ```
+
     c. 在所有的 `...Controller` 中 执行 a,b 步骤 (有几个表就有几个 `...Controller` )
 3. 修改所有 `pojo.request` 中的导入包
    ![alt text](fig/image-8.png)
     a. 删除红色的俩行
     b. 在 `@NotNull` 上 按快捷键 `Alt + Enter` （mac 上是 `Option + Enter`） 选择 `javax` 的 `@NotNull`
     c. 在 `@NotBlank` 上 按快捷键 `Alt + Enter` （mac 上是 `Option + Enter`） 选择 `javax` 的 `@NotBlank`
+
+    ```java
+    import javax.validation.constraints.NotBlank;
+    import javax.validation.constraints.NotNull;
+    ```
+
     d. 在 所有的 `...Request` 中 执行 a,b,c 步骤 (有几个表就有几个 `...Request` )
 4. 修改所有 `pojo.response` 中的导入包
     ![alt text](fig/image-9.png)
@@ -114,15 +137,7 @@ x, y需要根据需要自己设置, x为一共有几位数，y为小数点后有
 
 ## 前端代码部署
 
-1. 在 `guns-8.1.2-front/src/views/` 自己的模块下面 **建立 一个当前子模块的文件夹**，将下载的前端代码解压，将解压后的文件夹拷贝到这个文件夹中
-
-# 在 SQL 中生成表
-
-连接服务器上的数据库
-
-把建表语句输入`新建查询`中，点击运行
-
-![alt text](fig/image-6.png)
+1. 在 `guns-8.1.2-front/src/views/` 自己的模块下面 **建立 一个当前子模块的文件夹** （与生成后端代码的的项目包名对应），将下载的前端代码解压，将解压后的文件夹拷贝到这个文件夹中
 
 # 建立菜单
 
