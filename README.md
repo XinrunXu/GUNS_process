@@ -14,9 +14,9 @@
 ## 启动后端
 需要更改的settings:
 1. guns version 1.8
-![alt text](image.png)
+![alt text](fig/image.png)
 2. 修改 maven 配置
-![alt text](image-1.png)
+![alt text](fig/image-1.png)
 3. 设置 `model-platform-yx/guns-8.1.2-backend/src/main/java` 为 Source root, (右键 -> Mark Directory as -> Sources Root)
 4. 设置 `model-platform-yx/guns-8.1.2-backend/src/main/resources` 为 Test Resource root, (右键 -> Mark Directory as -> Test Resource Root)
 5. 打开guns-8.1.2-backend启动后端即可
@@ -35,7 +35,7 @@ https://gunsdevops.com/login 注册并登陆
 
 -> 2 `数据表`
 
-![alt text](image-4.png)
+![alt text](fig/image-4.png)
 
 -> 3 [右侧上方] `导入SQL`
 
@@ -55,11 +55,11 @@ https://gunsdevops.com/login 注册并登陆
 
 -> 3 `后端代码`
 
-![alt text](image-3.png)
+![alt text](fig/image-3.png)
 
 开始建立后端代码，红框部分请根据自己的模块进行修改
 
-![alt text](image-2.png)
+![alt text](fig/image-2.png)
 
 -> 4 将我的分类中所有输入这个子模块的表导入进去 (一般是最后几个)
 
@@ -77,7 +77,7 @@ https://gunsdevops.com/login 注册并登陆
 
 开始建立前端代码，红框部分请根据自己的模块进行修改
 
-![alt text](image-5.png)
+![alt text](fig/image-5.png)
 
 -> 4 将我的分类中所有输入这个子模块的表导入进去 (一般是最后几个)
 
@@ -92,18 +92,18 @@ https://gunsdevops.com/login 注册并登陆
 
 1. 将下载的后端代码解压，将解压后的文件夹拷贝到`guns-8.1.2-backend/src/main/java/cn/stylefeng/guns/modular`相应的模块中
 2. 修改所有 `controller` 中的导入包
-   ![alt text](image-7.png)
+   ![alt text](fig/image-7.png)
     a. 删除红色的行
     b. 在 @Resource 上 按快捷键 `Alt + Enter` （mac 上是 `Option + Enter`） 选择 `Add module dependency`，选择当前模块
     c. 在所有的 `...Controller` 中 执行 a,b 步骤 (有几个表就有几个 `...Controller` )
 3. 修改所有 `pojo.request` 中的导入包
-   ![alt text](image-8.png)
+   ![alt text](fig/image-8.png)
     a. 删除红色的俩行
     b. 在 `@NotNull` 上 按快捷键 `Alt + Enter` （mac 上是 `Option + Enter`） 选择 `javax` 的 `@NotNull`
     c. 在 `@NotBlank` 上 按快捷键 `Alt + Enter` （mac 上是 `Option + Enter`） 选择 `javax` 的 `@NotBlank`
     d. 在 所有的 `...Request` 中 执行 a,b,c 步骤 (有几个表就有几个 `...Request` )
 4. 修改所有 `pojo.response` 中的导入包
-    ![alt text](image-9.png)
+    ![alt text](fig/image-9.png)
     a. 在第一行 上 按快捷键 `Alt + Enter` （mac 上是 `Option + Enter`） 选择 上图中红框的包
     b. 在 所有的 `...Vo` 中 执行 a 步骤 (有几个表就有几个 `...Vo` )
 
