@@ -161,11 +161,11 @@
 
 -> 4 点击`新建`
 
-![alt text](image.png)
+![alt text](fig/image-11.png)
 
 -> 5 根据自己子系统输入相应的信息
 
-![alt text](image-1.png)
+![alt text](fig/image-12.png)
 
 ## 建立二级目录
 
@@ -173,7 +173,7 @@
 
 -> 2 在最右边滑动到自己的子系统
 
-![alt text](image-2.png)
+![alt text](fig/image-13.png)
 
 -> 3 按照图示步骤修改为自己的二级目录信息
 
@@ -181,14 +181,14 @@
 
 -> 1 点击相应二级目录的`新建`
 
-![alt text](image-3.png)
+![alt text](fig/image-14.png)
 
 -> 2 按照图示步骤修改为自己的三级目录信息
 
-![alt text](image-4.png)
+![alt text](fig/image-15.png)
 
 路由地址为前端代码中的vue地址：
 
-![alt text](image-5.png)
+![alt text](fig/image-16.png)
 
 添加完第一个三级目录后，请重启前后端代码，确保菜单能够正常显示后，再继续添加余下三级目录
