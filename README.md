@@ -2,9 +2,9 @@
 整理一下如何上传前后端的流程
 
 ## Requirement
-1. Java Jdk 1.8
-2. Nodejs 18+
-3. maven 3.6+
+1. Java JDK 1.8
+2. NodeJS 18+
+3. Maven 3.6+
 
 ## Dependency
 1. 打开`guns-8.1.2-roses-kernel`文件夹，执行`mvn clean install`命令，将核心包安装到本地仓库
@@ -39,7 +39,7 @@
 
 # 如何建表
 
-- 这一部分可以同时参考PDF 《代码生成及菜单配置》
+- 这一部分可以同时参考PDF《代码生成及菜单配置》
 
     https://gunsdevops.com/login 注册并登陆
 
@@ -148,7 +148,7 @@
 
 # 建立菜单
 
-- 这一部分可以同时参考PDF 《代码生成及菜单配置》
+- 这一部分可以同时参考PDF《代码生成及菜单配置》
 
 ## 建立一级目录
 
